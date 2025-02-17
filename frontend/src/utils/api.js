@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-const url = import.meta.env.VITE_BACKEND_URL;
+const url = "https://expency.onrender.com";
 
 export const postApi = async (path, body) => {
   let response;
@@ -62,7 +62,7 @@ export async function putApi(path, data, parameters = {}) {
 
 export async function deleteApi(path, parameters) {
   axios.defaults.withCredentials = true;
-  let response; 
+  let response;
   await axios
     .delete(url + path, {
       ...parameters,
