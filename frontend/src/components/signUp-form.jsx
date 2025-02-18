@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { useAuth } from "@/context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function SignUpForm({ ...props }) {
   const [password, setPassword] = useState("");
@@ -109,9 +109,9 @@ export function SignUpForm({ ...props }) {
             </div>
             <div className="mt-4 text-center text-sm">
               Already have an account?{" "}
-              <a href="/login" className="underline underline-offset-4">
+              <Link to="/login" className="underline underline-offset-4">
                 Sign in
-              </a>
+              </Link>
             </div>
           </form>
         </CardContent>
