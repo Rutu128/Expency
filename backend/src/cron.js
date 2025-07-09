@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = "https://expency.onrender.com/"; // Replace with your actual API
 
 // Schedule the cron job to run every 10 minutes
-cron.schedule("*/10 * * * *", async () => {
+cron.schedule("*/20 * * * *", async () => {
   try {
     console.log("🔄 Cron job started: Calling API...");
 
